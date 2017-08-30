@@ -306,6 +306,7 @@ ul.social-buttons {
   padding: 20px 40px;
   border-radius: 3px;
   color: white;
+  cursor: pointer;
   border-color: #dddddd;
   background-color: #cccccc;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
