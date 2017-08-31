@@ -12,7 +12,6 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -20,10 +19,11 @@
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/css/iziModal.css" />
 
   <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!-- <link href="css/style.css" rel="stylesheet"> -->
 
 </head>
 
@@ -66,7 +66,8 @@
       <div class="intro-text">
         <div class="intro-heading">Titulo em destaque</div>
         <div class="intro-lead-in">Subtitulo convindando para inciar pesquisa</div>
-        <button class="btn btn-xl js-scroll-trigger" id="start">Botão para iniciar a pesquisa</button>
+        <button class="btn btn-xl trigger" id="start">Botão para iniciar a pesquisa</button>
+        <!-- <a class="trigger">Modal</a> -->
         <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#category">Open modal</button> -->
       </div>
     </div>
@@ -280,20 +281,17 @@
       </div>
     </div>
   </div> -->
-  <div class="modal fade" id="category">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <form name='form-login'>
-            <span class="fontawesome-user"></span>
-            <input type="text" id="user" placeholder="Username">
-            <span class="fontawesome-lock"></span>
-            <input type="password" id "pass" placeholder="Password">
-            <input type="submit" value="Login">
-          </form>
-        </div>
-      </div>
-    </div>
+  <div id="login">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <form name='form-login'>
+      <span class="fa fa-user"></span>
+      <input type="text" id="user" class='input' placeholder="Email">
+      <span class="fa fa-lock"></span>
+      <input type="password" id="pass" class='input' placeholder="Senha">
+      <input type="submit" class="registrar" value="Registrar">
+      <input type="submit" value="Login">
+
+    </form>
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -309,16 +307,20 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.js"></script>
   <script>
     $(document).ready(function () {
-      $("#checkout").modal("show").on('shown.bs.modal', function () {
-        $("#checkout").css('display', 'block');
-      })
+      $("#login").iziModal({
+        top: 200,
+        width: 350,
+        radius: 20
+      });
     });
 
-    $('#start').click(function () {
-      $('#login').modal('show');
+
+    $(document).on('click', '.trigger', function (event) {
+      event.preventDefault();
+      $('#login').iziModal('open');
     });
   </script>
 

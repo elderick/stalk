@@ -343,3 +343,86 @@ ul.social-buttons {
   .btn-xl .badge {
     color: #bbbbbb;
     background-color: white; }
+
+  
+  #login {
+  margin: 50px auto;
+  width: 100%;
+}
+input {
+  background-color: transparent;
+  border: 0px solid;
+  height: 20px;
+  width: 160px;
+  color: #414141;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+#login form {
+  margin: auto;
+  padding: 68px 22px 48px 22px;
+  width: 100%;
+  border-radius: 20px;
+  background: white;
+  /* border-top: 3px solid #cccccc; */
+  /* border-bottom: 3px solid #cccccc; */
+}
+
+#login form span {
+  /* background-color: #363b41; */
+  border-radius: 3px 0px 0px 3px;
+  /* border-right: 3px solid #434a52; */
+  color: #606468;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#login form .input {
+    color: #cccccc;
+    margin-bottom: 1em;
+    width: 230px;
+    height: 50px;
+    border-bottom: 1px solid;
+}
+
+/* #login form #pass {
+  color: #cccccc;
+  margin-bottom: 1em;
+  width: 230px;
+  height: 50px;
+  border-bottom: 1px solid;
+} */
+
+/* #login form input[type="password"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+} */
+
+#login form input[type="submit"] {
+  margin-top: 40px;
+  background: #aaaaaa;
+  border: 0;
+  width: 42%;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+#login form input[type="submit"]:hover {
+  background: #bbbbbb;
+}
+
+.registrar {
+  float: right;
+}
