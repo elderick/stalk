@@ -1,0 +1,13 @@
+.titulo {
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.control-label {
+    text-align: left !important;
+}
+
+.next{
+    margin-left: 42.5%;
+    margin-top: 25px;
+}

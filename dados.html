@@ -1,0 +1,353 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stalking Portal</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <style></style>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+    <link href="css/survey.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Form Name -->
+                <legend class='titulo'>Dados</legend>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nascimento">Data de nascimento</label>
+                    <div class="col-md-4">
+                        <input id="nascimento" name="date" type="text" placeholder="dd/mm/aaaa" onkeyup="
+                        var v = this.value;
+                        if (v.match(/^\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                            this.value = v + '/';
+                        }" maxlength="10" class="form-control input-md">
+                        <!-- <span class="help-block">A valid domain ensures that your Affinitomics work as expected.</span> -->
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Sexo</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                            <option value="0">Masculino</option>
+                            <option value="1">Feminino</option>
+                            <option value="2">Homem trans</option>
+                            <option value="3">Mulher trans</option>
+                            <option value="4">Não-binário</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Orientação Sexual</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                            <option value="0">Heterossexual</option>
+                            <option value="1">Homossexual</option>
+                            <option value="2">Bissexual</option>
+                            <option value="3">Abstinente</option>
+                            <option value="4">Assexual</option>
+                            <option value="4">Não quer responder</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Escolaridade</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                            <option value="0">Ensino Fundamental</option>
+                            <option value="1">Ensino Médio</option>
+                            <option value="2">Ensino Superior Incompleto</option>
+                            <option value="3">Ensino Superior Completo</option>
+                            <option value="4">Pós-graduação</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Renda familiar</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                            <option value="0">Até dois salários mínimos</option>
+                            <option value="1">Até cinco salários mínimos</option>
+                            <option value="2">Até dez salários mínimos</option>
+                            <option value="3">Até vinte salários mínimos</option>
+                            <option value="4">Acima de vinte salários mínimos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Número de pessoas na família</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                            <option value="0">Uma</option>
+                            <option value="1">Duas</option>
+                            <option value="2">Três</option>
+                            <option value="3">Quatro</option>
+                            <option value="4">Mais de quatros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">Ocupação</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+                                <option value="0">Estudante</option>
+                                <option value="1">Profissional Liberal (advogado, arquiteto, psicólogo)</option>
+                                <option value="2">Autônomo</option>
+                                <option value="3">Servidor Público</option>
+                                <option value="4">Empregado Público</option>
+                                <option value="5">Empregado CLT</option>
+                                <option value="6">Terceirizado</option>
+                                <option value="7">Empresário</option>
+                                <option value="8">Sem ocupação</option>
+                            </select>
+                    </div>
+                </div>
+
+
+
+                <!-- 
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="project">Project name</label>
+                    <div class="col-md-4">
+                        <input id="project" name="project" type="text" placeholder="Puppy Finder" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="typesite">What type of site?</label>
+                    <div class="col-md-4">
+                        <select id="typesite" name="typesite" class="form-control">
+<option value="1">Social/Blog</option>
+<option value="2">E-Commerce</option>
+<option value="">General Business</option>
+<option value="">Entertainment</option>
+<option value="">News</option>
+<option value="">Directory</option>
+<option value="">Education</option>
+<option value="">Other</option>
+</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit">Submit the form without becoming an "Insider" with club benefits or a chance to win one of 5 lifetime licenses to Affinitomics for Wordpress Pro. <br><span style="font-size: 120%; color: blue;">Or take 3 minutes to finish the survey...</span></label>
+                    <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-warning" style="width: 360px;">Submit without benefits - Bummer</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="companyname">Company</label>
+                    <div class="col-md-4">
+                        <input id="companyname" name="companyname" type="text" placeholder="Awesome, Inc." class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="phone">Phone:</label>
+                    <div class="col-md-4">
+                        <input id="phone" name="phone" type="text" placeholder="(555) 555 - 5555" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="address">Address, City, State</label>
+                    <div class="col-md-4">
+                        <input id="address" name="address" type="text" placeholder="12321 42nd St. New York, NY 10007" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="useageboxes">What will you use affinitomics for?</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="useageboxes-0">
+<input type="checkbox" name="useageboxes" id="useageboxes-0" value="">
+Make your site “Smarter”
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-1">
+<input type="checkbox" name="useageboxes" id="useageboxes-1" value="">
+Improve conversion / relevance
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-2">
+<input type="checkbox" name="useageboxes" id="useageboxes-2" value="">
+Improve search &amp; reduce noise
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-3">
+<input type="checkbox" name="useageboxes" id="useageboxes-3" value="">
+Reduce programming time/Increase “League of Legend” standing
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-4">
+<input type="checkbox" name="useageboxes" id="useageboxes-4" value="">
+Replace micro data / formats
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-5">
+<input type="checkbox" name="useageboxes" id="useageboxes-5" value="">
+Reduce bandwidth cost &amp; reliance on cookies
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-6">
+<input type="checkbox" name="useageboxes" id="useageboxes-6" value="">
+Increase privacy
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-7">
+<input type="checkbox" name="useageboxes" id="useageboxes-7" value="">
+Create intelligent filters and knowledgebases
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-8">
+<input type="checkbox" name="useageboxes" id="useageboxes-8" value="">
+Improve SEM/SEO
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="useageboxes-9">
+<input type="checkbox" name="useageboxes" id="useageboxes-9" value="">
+Other
+</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="explainother"></label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="explainother" name="explainother">Explain "Other"</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="devsavings">How much time does Affinitomics save you over creating similar functionality?</label>
+                    <div class="col-md-4">
+                        <select id="devsavings" name="devsavings" class="form-control">
+<option value="">I don't know... Probably a lot</option>
+<option value="">Less than 25%</option>
+<option value="">25%</option>
+<option value="">50%</option>
+<option value="">75%</option>
+<option value="">More than 75%</option>
+</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="howyouuse">How do you use Wordpress?</label>
+                    <div class="col-md-4">
+                        <select id="howyouuse" name="howyouuse" class="form-control">
+<option value="">Professional developer/designer</option>
+<option value="">Friends and family</option>
+<option value="">Personal use</option>
+</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="devpath">In the next 12 months Affinitomics will experience several upgrades. What features would you like to see added?</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="devpath-0">
+<input type="checkbox" name="devpath" id="devpath-0" value="">
+Layouts (headline, image, excerpt)
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-1">
+<input type="checkbox" name="devpath" id="devpath-1" value="">
+Geo-tagging
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-2">
+<input type="checkbox" name="devpath" id="devpath-2" value="">
+Caching
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-3">
+<input type="checkbox" name="devpath" id="devpath-3" value="">
+WYSIWYG Styling
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-4">
+<input type="checkbox" name="devpath" id="devpath-4" value="">
+Email targeting
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-5">
+<input type="checkbox" name="devpath" id="devpath-5" value="">
+Dynamic member pages
+</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="devpath-6">
+<input type="checkbox" name="devpath" id="devpath-6" value="">
+Dynamic store
+</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="how">Where/how did you find Affinitomics?</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="how" name="how"></textarea>
+                    </div>
+                </div> -->
+
+                <!-- <div class="form-group">
+                    <label class="col-md-4 control-label" for="where">Where do you normally look for plugins?</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="where" name="where"></textarea>
+                    </div>
+                </div>  -->
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4"> </label>
+                    <div class="col-md-6">
+                        <a class="btn btn-primary next" href="percepcao.html">Próxima página</a>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
