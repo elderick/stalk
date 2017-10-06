@@ -168,8 +168,6 @@
                                 <option value="1">Menos de um mês</option>
                                 <option value="2">Menos de seis meses</option>
                                 <option value="3">Mais de seis meses</option>
-                                <option value="4">Menos de seis meses</option>
-                                <option value="4">Mais de seis meses</option>
                             </select>
                     </div>
                 </div>
@@ -177,7 +175,7 @@
                 <div class="form-group" id="33a">
                     <label class="col-md-4 control-label" for="33a">Número de anos</label>
                     <div class="col-md-4">
-                        <input id="33avalue" name="33a" type="text" placeholder="1-9" class="form-control input-md">
+                        <input id="33avalue" name="33a" type="text" placeholder="Numero de anos que duraram as instrusões" class="form-control input-md">
                         <!-- <span class="help-block">A valid domain ensures that your Affinitomics work as expected.</span> -->
                     </div>
                 </div>
@@ -311,7 +309,7 @@
                 <div class="form-group" id="34va">
                     <!-- <label class="col-md-4 control-label" for="33a">Número de anos</label> -->
                     <div class="col-md-4">
-                        <input id="34vavalue" name="34va" type="text" class="form-control input-md">
+                        <input id="34vavalue" name="34va" type="text" class="form-control input-md outro">
                         <!-- <span class="help-block">A valid domain ensures that your Affinitomics work as expected.</span> -->
                     </div>
                 </div>
@@ -327,6 +325,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('#34va').hide();
+        $('#33a').hide();
+        $('#33b').hide();
     });
 
     var limit = 3;
@@ -338,16 +338,29 @@
     });
 
     $('#34v').click(function () {
-        if( $("#34v").is(":checked") == true)
+        if ($("#34v").is(":checked") == true)
             $('#34va').show();
         else
             $('#34va').hide();
-        
+
+
+    });
+    $('#33').click(function () {
+        if ($('#33 option:selected').text() == "Mais de seis meses") {
+            $('#33a').show();
+            $('#33b').show();
+        }
+        else {
+            $('#33a').hide();
+            $('#33b').hide();
+        }
+
 
     });
     $('#concluir').click(function () {
         //post pro banco com usuario e valores das respostas
     });
+
 </script>
 
 </html>
