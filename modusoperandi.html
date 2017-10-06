@@ -326,13 +326,7 @@
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#21b1').hide();
-        $('#21b2').hide();
-        $('#21d').hide();
-        $('#22').hide();
-        // $('#23').hide();
-        $('#24').hide();
-        $('#25').hide();
+        $('#34va').hide();
     });
 
     var limit = 3;
@@ -343,33 +337,12 @@
         }
     });
 
-    $('#21').click(function () {
-        if ($('#21 option:selected').text() == 'Talvez') {
-            $('#21b1').show();
-            $('#21b2').show();
-            $('#21d').hide();
-            $('#24').show();
-        }
-        else if ($('#21 option:selected').text() == "Sim, mais de uma pessoa") {
-            $('#21d').show();
-            $('#21b1').hide();
-            $('#21b2').hide();
-        }
-        else {
-            $('#21d').hide();
-            $('#21b1').hide();
-            $('#21b2').hide();
-        }
-
-        if ($('#21 option:selected').text() == 'Sim, mais de uma pessoa' || $('#21 option:selected').text() == 'Sim, uma pessoa')
-            $('#25').show();
+    $('#34v').click(function () {
+        if( $("#34v").is(":checked") == true)
+            $('#34va').show();
         else
-            $('#25').hide();
-
-        if ($('#21 option:selected').text() == "Não")
-            $('#22').show();
-        else
-            $('#22').hide();
+            $('#34va').hide();
+        
 
     });
     $('#concluir').click(function () {
